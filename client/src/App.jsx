@@ -1,12 +1,16 @@
-import { useState } from "react";
-
 import "./App.css";
+import {Outlet} from 'react-router-dom'
+import {Header, Footer} from './components/index.js'
 
 function App() {
 
   return (
     <div className="bg-red-600">
-      Adkamp
+      <Header/>
+      <main>
+        <Outlet/>
+      </main>
+      <Footer/>
     </div>
   );
 }

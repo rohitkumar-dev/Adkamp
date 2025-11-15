@@ -15,7 +15,9 @@ import Events from './components/pages/Events.jsx'
 import PrivacyPolicy from './components/pages/PrivacyPolicy.jsx'
 import TermsConditions from './components/pages/TermsConditions.jsx'
 import Support from './components/pages/Support.jsx'
-
+import Login from './components/pages/admin/Login.jsx'
+import Dashboard from './components/pages/admin/Dashboard.jsx'
+import Blog from './components/pages/Blog.jsx'
 
 const router = createBrowserRouter([
   {
@@ -67,6 +69,14 @@ const router = createBrowserRouter([
         element: <TermsConditions/>,
       },
       {
+        path: "/admin/login",
+        element: <Login/>
+      },
+      {
+        path: "/admin/dashboard",
+        element: <Dashboard/>
+      },
+      {
         path: "*",
         element: <Navigate to="/" replace/>
       },
@@ -76,8 +86,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Provider store={store}/>
+    <Provider store={store}>
       <RouterProvider router={router}/>
-    <Provider/>
+    </Provider>
   </StrictMode>,
 )
