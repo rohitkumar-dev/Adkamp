@@ -5,9 +5,9 @@ import {Header, Footer} from './components/index.js'
 function App() {
 
   return (
-    <div className="bg-red-600">
+    <div className=" ">
       <Header/>
-      <main>
+      <main className="">
         <Outlet/>
       </main>
       <Footer/>
