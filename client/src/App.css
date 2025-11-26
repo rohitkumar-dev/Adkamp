@@ -1,0 +1,19 @@
+
+.main-img-path {
+  clip-path: polygon(
+    0% 0%,    /* top-left */
+    100% 0%,  /* top-right */
+    100% 85%, /* near bottom-right */
+    65% 85%,  /* step in */
+    65% 100%, /* bottom step */
+    0% 100%   /* bottom-left */
+  );
+} 
+
+
+
+
+
+
+
+

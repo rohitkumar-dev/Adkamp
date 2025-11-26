@@ -11,23 +11,25 @@ function Header() {
       <div className="w-1/2 shrink md:w-auto h-full flex items-center ">
         <h1 className="text-amber-600 text-xl md:text-3xl font-black cursor-pointer ">AD<span className="text-black">KAMP</span></h1>
       </div>
-      <div className={` ${open? "": "hidden"} mt-1 md:mt-0 md:inline-block w-full order-last md:order-0 md:w-1/2 font-normal md:font-medium text-sm md:text-[16] lg:text-lg bg-red-100/80 backdrop-blur-sm  md:bg-transparent rounded-2xl p-2 md:p-5`}>
-        <ul className=" md:flex flex-row justify-evenly">
-          <li><Link to="">Home</Link></li>
-          <li><Link to="">Portfolio</Link></li>
-          <li><Link to="">Services</Link></li> 
-          <li><Link to="">Events</Link></li>
-          <li><Link to="">About</Link></li>
+      <div className={` ${open? "": "hidden"} text-center bg-red-100 backdrop-blur-sm md:backdrop-blur-none md:bg-transparent mt-1 md:mt-0 md:inline-block w-full order-last md:order-0 md:w-1/2 font-normal md:font-medium text-md md:text-[16] lg:text-lg rounded-lg p-4 md:p-5`}>
+        <ul className=" md:flex flex-row justify-evenly ">
+          <li className="pb-1 md:pb-0"><Link to="">Home</Link></li>
+          <li className="pb-1 md:pb-0"><Link to="">Portfolio</Link></li>
+          <li className="pb-1 md:pb-0"><Link to="">Services</Link></li> 
+          <li className="pb-1 md:pb-0"><Link to="">Events</Link></li>
+          <li className=""><Link to="">About</Link></li>
         </ul>
       </div>
       <div className="flex flex-row justify-end w-1/2 md:w-auto ">
         <Button name={"Consult now"}></Button>
         <button onClick={()=>setOpen(!open)} className="md:hidden ml-3 cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M92-52v-104.67h776.67V-52H92Zm0-250.33V-407h776.67v104.67H92ZM92-553v-104.67h776.67V-553H92Zm0-250.33v-105.34h776.67v105.34H92Z"/></svg>
+          {!open? ( <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m480-340 180-180-57-56-123 123-123-123-57 56 180 180Zm0 260q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>) 
+          : (<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m357-384 123-123 123 123 57-56-180-180-180 180 57 56ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>)}
+              
         </button>
       </div>
       </nav>
-    </div>
+    </div> 
   );
 }
 

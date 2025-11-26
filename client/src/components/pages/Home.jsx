@@ -1,5 +1,6 @@
 import React from "react";
 import { Aurora } from "../index";
+import heroImg from "../../assets/hero.jpg"
 
 function Home() {
   return (
@@ -18,44 +19,34 @@ function Home() {
           colorStops={["#FF7518", "#000000", "#FF7518"]}
           blend={0.5}
           amplitude={1.0}
-          speed={0.6}
+          speed={0.5}
         />
       </div>
 
       {/* content */}
       <div className="relative ">
-        <div className="text-white text-center ">
-          <h1 className="text-5xl md:text-8xl font-bold mt-20">Managing Your Solutions</h1>
-          <h2 className="text-6xl mt-10">Perspective | Process | Productivity</h2>
+        <div className="text-white text-center px-2">
+          <h1 className=" text-5xl md:text-7xl font-medium md:font-bold mt-15 md:mt-20">Managing Your Solutions</h1>
+          <h2 className="text-2xl md:text-5xl mt-7 md:mt-10 text-center">Perspective <span className="text-amber-500">|</span> Process <span className="text-amber-500">|</span> Productivity</h2>
         </div>
         
 
 
 
-<div className="relative w-4/5 h-[350px] rounded-2xl overflow-hidden mt-20 mx-auto mb-20">
-  {/* Background Image */}
+<div className=" w-8/9 rounded-2xl overflow-hidden mt-10 md:mt-20 mx-auto mb-20">
   <img
-    src="https://images.pexels.com/photos/31308009/pexels-photo-31308009.jpeg"
+    // src="https://images.pexels.com/photos/31308009/pexels-photo-31308009.jpeg"
+    src={heroImg}
     alt="team"
-    className="w-full h-full object-cover"
+    className="main-img-path w-full max-h-150 object-cover"
   />
 
-  {/* Bottom Right Overlay */}
-  <div className="absolute bottom-4 right-4 bg-black/70 text-white px-4 py-2 rounded-xl backdrop-blur-sm flex items-center gap-3">
-    {/* Small avatars */}
-    <div className="flex -space-x-2">
-      <img src="/p1.jpg" className="w-8 h-8 rounded-full border-2 border-black" />
-      <img src="/p2.jpg" className="w-8 h-8 rounded-full border-2 border-black" />
-      <img src="/p3.jpg" className="w-8 h-8 rounded-full border-2 border-black" />
-    </div>
+</div>  
 
-    {/* Text */}
-    <div className="text-right leading-tight">
-      <p className="text-xl font-semibold">200k</p>
-      <p className="text-xs opacity-80">satisfied customers</p>
-    </div>
-  </div>
-</div>
+
+
+
+
 
 
 
