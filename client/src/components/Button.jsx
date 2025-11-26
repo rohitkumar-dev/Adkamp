@@ -5,8 +5,8 @@ function Button({
     name,
 }) {
   return (
-    <div className={` ${className} w-40 h-10 md:h-13 rounded-4xl  bg-amber-500 `}>
-        <button className='h-full w-full font-medium text-sm md:text-lg cursor-pointer'>
+    <div className={` ${className} px-3 md:px-5 h-9 md:h-11 rounded-4xl  bg-amber-500 `}>
+        <button className='h-full w-full font-medium text-xs md:text-sm cursor-pointer '>
             {name}
         </button>
     </div>
