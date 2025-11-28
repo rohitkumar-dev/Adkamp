@@ -6,7 +6,7 @@ import {Button} from '../index'
 function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="flex items-center sticky top-0 z-1"> 
+    <div className="flex items-center sticky top-0 z-2"> 
      <nav className="px-5 md:px-8 h-18 md:h-20 w-full flex flex-wrap justify-between  items-center bg-red-100/80 backdrop-blur-sm  ">
       <div className="w-1/2 shrink md:w-auto h-full flex items-center ">
         <h1 className="text-amber-600 text-xl md:text-3xl font-black cursor-pointer ">AD<span className="text-black">KAMP</span></h1>
