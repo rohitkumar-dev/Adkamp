@@ -30,13 +30,6 @@ const ResponsiveHeroCard = ({
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* 3. THE CORNER "BITE" CONTENT
-          - absolute bottom-0 right-0: Anchors it to the corner.
-          - bg-[#1a1a1a]: The dark background color.
-          - rounded-tl-[...]: Creates the top-left curve (the "bite" effect).
-          - The bottom-right corner of this box is square, but it gets cut off 
-            by the Parent Container's overflow-hidden, creating a perfect match.
-        */}
         <div 
           className={`
             h-20 md:h-30
@@ -79,15 +72,5 @@ const ResponsiveHeroCard = ({
   );
 };
 
-// Usage Example
-// const App = () => {
-//     return (
-//         <div className="min-h-screen bg-gray-200 py-20 flex justify-center">
-//              <ResponsiveHeroCard 
-//                 imageSrc="https://images.pexels.com/photos/3184361/pexels-photo-3184361.jpeg" 
-//              />
-//         </div>
-//     );
-// };
 
 export default ResponsiveHeroCard;
