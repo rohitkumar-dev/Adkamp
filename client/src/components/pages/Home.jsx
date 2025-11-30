@@ -14,6 +14,7 @@ import WorkProcess from "../workprocess/WorkProcess";
 import BlogSection from "../blog/BlogSection";
 import ContactSection from "../contact/ContactSection";
 import BrandSlider from "../brands/BrandSlider";
+import TestimonialSection1 from "../testimonial/TestimonialSection1";
 
 
 function Home() {
@@ -61,6 +62,7 @@ function Home() {
 <ProjectsSection/>
 <AchievementSection/>
 <TestimonialSection/>
+<TestimonialSection1/>
 <WorkProcess/>
 <BlogSection/>
 <ContactSection/>

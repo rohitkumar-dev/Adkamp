@@ -9,40 +9,34 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-amber-600 rounded-3xl p-8 md:p-16">
+    <div className="flex w-full p-3 md:p-5">
+    <footer className="w-full bg-lime-200 rounded-3xl p-8 md:pt-12 ">
       {/* === Row 1: Heading + Socials === */}
       <div className="w-full grid md:grid-cols-2 gap-10">
         {/* Left Text Block */}
         <div>
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900">
-            Let’s Talk
-          </h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900">Let’s Talk</h2>
 
           <p className="mt-6 text-gray-700 max-w-md leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-4 mt-8">
-            {[FaFacebookF, FaYoutube, FaLinkedinIn, FaInstagram].map(
-              (Icon, i) => (
-                <span
-                  key={i}
-                  className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-xl hover:bg-gray-800 transition"
-                >
-                  <Icon />
-                </span>
-              )
-            )}
+          <div className="flex items-center gap-4 mt-4">
+            {[FaFacebookF, FaYoutube, FaLinkedinIn, FaInstagram].map((Icon, i) => (
+              <span
+                key={i}
+                className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-xl hover:bg-gray-800 transition"
+              >
+                <Icon />
+              </span>
+            ))}
           </div>
         </div>
 
-        {/* Newsletter Block (Desktop visible here, mobile moved down) */}
+        {/* Newsletter Block (Desktop only) */}
         <div className="hidden md:block">
-          <h5 className="text-lg font-semibold mb-4">
-            Get the latest inspiration & insights
-          </h5>
+          <h5 className="text-lg font-semibold mb-4">Get the latest inspiration & insights</h5>
 
           <div className="relative w-full max-w-md">
             <input
@@ -57,11 +51,11 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* === Row 2 + Row 3: Columns (Mobile Grid 2x2) === */}
-      <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
-        {/* Column 1 – Service Links */}
+      {/* === Columns Section (Updated with Information Column) === */}
+      <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+        {/* Column 1 – Services */}
         <div>
-          <h4 className="text-lg font-semibold mb-4">Address</h4>
+          <h4 className="text-lg font-semibold mb-2">Address</h4>
           <ul className="space-y-2 text-gray-800">
             <li>Web Development</li>
             <li>UX / UI Design</li>
@@ -71,33 +65,40 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Column 2 – Office Address */}
+        {/* Column 2 – Information */}
         <div>
-          <h4 className="text-lg font-semibold mb-4">Address</h4>
-          <p className="text-gray-800 leading-relaxed">
-            4140 Parker Rd. <br />
-            Allentown, New Mexico 31134
-          </p>
+          <h4 className="text-lg font-semibold mb-2">Information</h4>
+          <ul className="space-y-2 text-gray-800">
+            <li>About Us</li>
+            <li>Our Team</li>
+            <li>Pricing</li>
+            <li>Case Studies</li>
+            <li>FAQs</li>
+          </ul>
         </div>
 
         {/* Column 3 – Support */}
         <div>
-          <h4 className="text-lg font-semibold mb-4">Support</h4>
+          <h4 className="text-lg font-semibold mb-2">Support</h4>
           <p className="text-gray-800 leading-relaxed">
             needhelp@company.com <br />
             (+123) 456789 00
           </p>
         </div>
 
-        {/* Empty Column for layout balance on large screens */}
-        <div></div>
+        {/* Column 4 – Location */}
+        <div>
+          <h4 className="text-lg font-semibold mb-2">Location</h4>
+          <p className="text-gray-800 leading-relaxed">
+            4140 Parker Rd. <br />
+            Allentown, New Mexico 31134
+          </p>
+        </div>
       </div>
 
-      {/* === Mobile Newsletter (Full Width) === */}
-      <div className="mt-10 md:hidden">
-        <h5 className="text-lg font-semibold mb-4">
-          Get the latest inspiration & insights
-        </h5>
+      {/* === Mobile Newsletter (Full Width Below Columns) === */}
+      <div className="mt-5 md:hidden">
+        <h5 className="text-lg font-semibold mb-4">Get the latest inspiration & insights</h5>
 
         <div className="relative w-full max-w-full">
           <input
@@ -112,9 +113,8 @@ export default function Footer() {
       </div>
 
       {/* === Copyright === */}
-      <div className="text-center mt-16 text-gray-700 text-sm">
-        © Copyright Reserved by Digitaal.com
-      </div>
+      <div className="text-center md:text-end mt-5 text-gray-700 text-sm">© Copyright Reserved by Digitaal.com</div>
     </footer>
+    </div>
   );
 }
