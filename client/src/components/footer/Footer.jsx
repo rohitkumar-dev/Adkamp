@@ -10,7 +10,7 @@ import {
 export default function Footer() {
   return (
     <div className="flex w-full p-3 md:p-5">
-    <footer className="w-full bg-lime-200 rounded-3xl p-8 md:pt-12 ">
+    <footer className="w-full bg-amber-500 rounded-3xl p-8 md:pt-12 ">
       {/* === Row 1: Heading + Socials === */}
       <div className="w-full grid md:grid-cols-2 gap-10">
         {/* Left Text Block */}

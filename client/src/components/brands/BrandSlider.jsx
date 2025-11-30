@@ -15,14 +15,12 @@ export default function BrandSlider() {
   const repeatedLogos = [...logos, ...logos, ...logos];
 
   return (
-    <div className="w-full pb-20 text-black flex flex-col items-center bg-transparent">
-      <div className="flex items-center gap-4">
+    <div className="w-full py-20 text-black flex flex-col items-center bg-transparent">
+      <div className="flex items-center gap-4 pb-5">
         <span className="h-px w-16 bg-gray-500" />
-
-        <h2 className="text-xl md:text-3xl font-semibold tracking-wide text-white">
+        <h2 className="text-xl md:text-3xl font-semibold tracking-wide text-black">
           1K+ Brands Trust Us
         </h2>
-
         <span className="h-px w-16 bg-gray-500" />
       </div>
 

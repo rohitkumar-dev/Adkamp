@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutSection() {
   return (
-    <section className="w-full bg-red-100 py-20 px-4 md:px-10 overflow-hidden relative">
+    <section className="w-full bg-red-900 py-20 px-4 md:px-10 overflow-hidden relative">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 relative">
         {/* LEFT SIDE — IMAGE & FLOATING ELEMENTS */}
         <div className="relative flex items-center justify-center lg:justify-start">
@@ -25,13 +25,13 @@ export default function AboutSection() {
             />
 
             {/* Floating ellipse */}
-            <span
+            {/* <span
               className="absolute -bottom-6 -left-6 w-16 h-16 bg-contain bg-no-repeat animate-[float_5s_ease-in-out_infinite]"
               style={{
                 backgroundImage:
                   "url(https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/footer-ellipse1.png)",
               }}
-            ></span>
+            ></span> */}
           </div>
         </div>
 
@@ -88,7 +88,7 @@ export default function AboutSection() {
       </div>
 
       {/* FLOATING ARROW + SHAPES (Desktop only) */}
-      <div className="hidden md:block absolute right-10 top-32">
+      {/* <div className="hidden md:block absolute right-10 top-32">
         <div
           className="w-16 h-16 bg-contain bg-no-repeat animate-[float_4s_ease-in-out_infinite]"
           style={{
@@ -96,9 +96,9 @@ export default function AboutSection() {
               "url(https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/arrow-1.png)",
           }}
         ></div>
-      </div>
+      </div> */}
 
-      <div className="hidden md:block absolute right-0 top-60">
+      {/* <div className="hidden md:block absolute right-0 top-60">
         <div
           className="w-20 h-20 bg-contain bg-no-repeat animate-[float_5s_ease-in-out_infinite]"
           style={{
@@ -106,7 +106,7 @@ export default function AboutSection() {
               "url(https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/Frame.png)",
           }}
         ></div>
-      </div>
+      </div> */}
 
       {/* Float Animation Keyframes */}
       <style>
