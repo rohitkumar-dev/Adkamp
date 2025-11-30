@@ -11,6 +11,9 @@ import ProjectsSection from "../projects/ProjectSection";
 import AchievementSection from "../achievement/AchievementSection";
 import TestimonialSection from "../testimonial/TestimonialSection";
 import WorkProcess from "../workprocess/WorkProcess";
+import BlogSection from "../blog/BlogSection";
+import ContactSection from "../contact/ContactSection";
+import BrandSlider from "../brands/BrandSlider";
 
 
 function Home() {
@@ -59,6 +62,9 @@ function Home() {
 <AchievementSection/>
 <TestimonialSection/>
 <WorkProcess/>
+<BlogSection/>
+<ContactSection/>
+<BrandSlider/>
 
 
     </div>
