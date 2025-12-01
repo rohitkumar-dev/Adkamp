@@ -5,7 +5,7 @@ import {Header, Footer} from './components/index.js'
 function App() {
 
   return (
-    <div className="bg-brand-800">
+    <div className="">
       <Header/>
       <main className="">
         <Outlet/>

@@ -29,7 +29,7 @@ export default function BlogSection() {
   ];
 
   return (
-    <section className="w-full bg-black text-white py-16 px-4 md:px-10">
+    <section className="mt-15 mb-15 w-full bg-black text-white py-16 px-4 md:px-10">
       {/* HEADER TEXT */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         {/* Left heading */}

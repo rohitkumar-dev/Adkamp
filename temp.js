@@ -22,3 +22,7 @@
 // 5. https://preview.themeforest.net/item/seoland-seo-and-digital-marketing-agency-wordpress-theme/full_screen_preview/51857427
 
 
+// hero section sample link: https://saaspo.com/sections/sanity-hero-section
+
+// images drive link: https://drive.google.com/drive/folders/1LT8VOP8FazgbfMPWdgMbRvUTi-TJzF5i?usp=sharing
+
