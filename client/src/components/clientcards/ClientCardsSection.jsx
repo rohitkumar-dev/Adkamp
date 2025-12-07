@@ -49,39 +49,18 @@ export default function ClientCardsSection() {
   ];
 
   return (
-    <section className="w-full bg-black text-white pb-20 overflow-hidden">
-      {/* ------------------ TOP MOVING MARQUEE TEXT ------------------ */}
-      {/* <div className="relative w-full overflow-hidden border-y bg-white border-gray-800 py-6 select-none">
-        <div className="animate-marquee whitespace-nowrap flex items-center gap-10 hover:[animation-play-state:paused]">
-          {marqueeText.map((t, i) => (
-            <span
-              key={i}
-              className="text-4xl md:text-6xl font-extrabold uppercase tracking-widest text-lime-400"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-        <div className="animate-marquee2 absolute top-6 left-0 whitespace-nowrap flex items-center gap-10 hover:[animation-play-state:paused]">
-          {marqueeText.map((t, i) => (
-            <span
-              key={"dup" + i}
-              className="text-4xl md:text-6xl font-extrabold uppercase tracking-widest text-lime-400"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-      </div> */}
+    <section className="w-full bg-amber-50 text-white pb-20 overflow-hidden">
 
 
-      
+<div className="ml-5 md:ml-10 mt-15 mb-7 flex items-center gap-2 text-black">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E17100"><path d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"/></svg>
+          <p className="font-medium text-lg">Clients</p>
+</div>
   
 <ScrollVelocity
-//   texts={['React Bits', 'Scroll Down']} 
-  texts={['Amit is the pubg player']} 
+  texts={['ADKAMP MEDIA MARKETING AND MORE ADKAMP MEDIA MARKETING AND MORE']} 
   velocity={20} 
-  className="custom-scroll-text bg-white text-orange-600 pt-5 pb-6"
+  className="custom-scroll-text bg-gray-50 text-amber-600 pt-5 pb-6"
 />
 
 
@@ -105,13 +84,13 @@ export default function ClientCardsSection() {
           {skills.map((skill, i) => (
             <SwiperSlide key={i}>
               <div
-                className={`my-10 rounded-3xl bg-[#111] p-6 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(180,255,120,0.6)] ${
+                className={`my-10 rounded-3xl bg-white p-6 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(180,255,120,0.6)] ${
                   skill.glow ? "shadow-[0_0_30px_rgba(180,255,120,0.6)]" : ""
                 }`}
               >
                 <img src={skill.img} alt={skill.title} className="w-16 h-16 mb-4" />
                 <h3 className="text-2xl font-bold mb-1">{skill.percent}</h3>
-                <p className="text-gray-300 text-sm">{skill.title}</p>
+                <p className="text-amber-600 text-sm">{skill.title}</p>
               </div>
             </SwiperSlide>
           ))}

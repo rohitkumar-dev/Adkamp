@@ -15,7 +15,7 @@ const testimonials = [
     id: 2,
     name: "Theresa Webb",
     role: "DESIGNER",
-    rating: 4,
+    rating: 5,
     text:
       "From kickoff to launch, the communication was clear and the results were better than we imagined.",
     avatar: "https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/test1.png",
@@ -31,13 +31,28 @@ const testimonials = [
   },
 ];
 
-function StarRow({ count = 5, filled = 4 }) {
+function StarRow({ count = 5, filled = 4 , className=""}) {
   return (
     <div className="flex items-center gap-1">
       {Array.from({ length: count }).map((_, i) => (
         <span
           key={i}
-          className={`inline-block text-sm ${i < filled ? "text-lime-400" : "text-gray-600"}`}
+          className={`inline-block text-sm ${i < filled ? "text-amber-600" : "text-gray-600"}`}
+        >
+          ★
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function StarRow2({ count = 5, filled = 4 , className=""}) {
+  return (
+    <div className="flex items-center gap-1">
+      {Array.from({ length: count }).map((_, i) => (
+        <span
+          key={i}
+          className={`inline-block text-sm ${i < filled ? "text-black" : "text-gray-200"}`}
         >
           ★
         </span>
@@ -60,21 +75,26 @@ export default function TestimonialSection() {
   const active = testimonials[activeIndex];
 
   return (
-    <section className="w-full bg-[#eceef3] text-white py-12 px-4 sm:px-6 md:py-20">
-      <div className="max-w-6xl mx-auto rounded-2xl bg-[#090b10] border border-[#161821] px-4 sm:px-6 md:px-10 py-8 sm:py-10 md:py-14 relative overflow-hidden">
+    <section className="w-full text-black py-12 px-4 sm:px-6 md:py-20">
+      <div className="max-w-6xl mx-auto rounded-2xl bg-gray-100 border border-[#161821] px-4 sm:px-6 md:px-10 py-8 sm:py-10 md:py-14 relative overflow-hidden">
         {/* Background decorative mesh */}
-        <div className="pointer-events-none absolute -left-20 top-10 h-60 w-60 rounded-full bg-[radial-gradient(circle,#1e293b,transparent_70%)] opacity-40" />
+        {/* <div className="pointer-events-none absolute -left-20 top-10 h-60 w-60 rounded-full opacity-100" /> */}
 
         <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr] items-start">
           {/* LEFT SIDE */}
           <div className="relative z-10 flex flex-col gap-5">
-            <p className="text-[10px] tracking-[0.25em] uppercase text-gray-400 flex items-center gap-2">
+            {/* <p className="text-[10px] tracking-[0.25em] uppercase text-gray-400 flex items-center gap-2">
               <span className="inline-block h-[1px] w-4 bg-lime-400" /> Testimonial
-            </p>
+            </p> */}
+
+            <div className=" mb-3 flex items-center gap-2 ">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E17100"><path d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"/></svg>
+                <p className="font-medium text-lg text-black">Testimonials</p>
+             </div>
 
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-snug">
               Hear what others say
-              <br /> about <span className="text-lime-400">partnering with us</span>
+              <br /> about <span className="text-amber-600">partnering with us</span>
             </h2>
 
             <p className="text-xs sm:text-sm text-gray-400 max-w-sm">
@@ -97,13 +117,13 @@ export default function TestimonialSection() {
 
           {/* RIGHT SIDE – FIXED SLIDER */}
           <div className="relative z-10">
-            <div className="bg-gradient-to-r from-lime-400 via-lime-500 to-yellow-400 rounded-2xl p-[2px] shadow-[0_0_30px_rgba(190,242,100,0.25)]">
-              <div className="bg-[#050609] rounded-xl p-4 sm:p-6 md:p-8 flex flex-col gap-5 min-h-[200px] sm:min-h-[230px]">
+            <div className="bg-blac rounded-2xl p-0.5 shadow-[0_0_30px_rgba(190,242,100,0.25)]">
+              <div className="bg-amber-600 border-3 border-gray-500 rounded-2xl p-4 sm:p-6 md:p-8 flex flex-col gap-5 min-h-[200px] sm:min-h-[230px]">
                 {/* Stars row */}
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-xs text-lime-300">
-                    <StarRow />
-                    <span className="hidden sm:inline text-[11px] text-gray-400">
+                  <div className="flex items-center gap-2 text-xs">
+                    <StarRow2 className={""}/>
+                    <span className="hidden sm:inline text-[11px] text-white">
                       {active.rating}.0 Rating
                     </span>
                   </div>
@@ -125,11 +145,11 @@ export default function TestimonialSection() {
                           <img
                             src={item.avatar}
                             alt={item.name}
-                            className="h-10 w-10 sm:h-11 sm:w-11 rounded-full object-cover border-2 border-lime-400/70"
+                            className="h-10 w-10 sm:h-11 sm:w-11 rounded-full object-cover border-2 border-white"
                           />
                           <div>
                             <span className="text-[12px] sm:text-sm font-medium">{item.name}</span>
-                            <span className="block text-[10px] uppercase tracking-[0.18em] text-gray-500">
+                            <span className="block text-[10px] uppercase tracking-[0.18em] text-gray-200">
                               {item.role}
                             </span>
                           </div>
@@ -143,13 +163,13 @@ export default function TestimonialSection() {
                 <div className="mt-4 flex justify-end gap-3">
                   <button
                     onClick={handlePrev}
-                    className="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-[#111318] flex items-center justify-center text-gray-300 hover:bg-lime-400 hover:text-black transition"
+                    className="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-white flex items-center justify-center text-black hover:bg-lime-400 hover:text-black transition"
                   >
                     ←
                   </button>
                   <button
                     onClick={handleNext}
-                    className="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-lime-400 flex items-center justify-center text-black hover:bg-lime-300 transition"
+                    className="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-black flex items-center justify-center text-white hover:bg-lime-300 transition"
                   >
                     →
                   </button>

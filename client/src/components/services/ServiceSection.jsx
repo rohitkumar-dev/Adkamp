@@ -46,50 +46,52 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="w-full bg-black text-white py-20 px-4 md:px-10 overflow-hidden relative">
+    <section className="w-full bg-white text-black py-20 px-4 md:px-10 overflow-hidden relative">
       {/* TOP TITLES */}
       <div className="max-w-7xl mx-auto">
         <div className="mb-5 flex items-center gap-2">
-          <img
+          {/* <img
             src="https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/Soft-Star-3.png"
             alt="icon"
             className="w-4 h-4"
-          />
-          <p className="uppercase tracking-wider text-sm">Service</p>
+          /> */}
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E17100"><path d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"/></svg>
+          <p className="font-medium text-lg">Service</p>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+        <h2 className="text-3xl md:text-4xl font-bold leading-tight">
           We provide digital
         </h2>
 
         <div className="flex flex-wrap items-center gap-4 mt-2">
-          <h2 className="text-4xl md:text-5xl font-bold">services</h2>
-          <h2 className="text-4xl md:text-5xl font-bold text-lime-400">
+          <h2 className="text-3xl md:text-4xl font-bold">services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-amber-600">
             for you
           </h2>
-          <img
+          {/* <img
             src="https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/section-img.jpg"
             alt="shape"
-            className="w-40 rounded-xl hidden "
-          />
+            className="w-40 rounded-xl "
+          /> */}
         </div>
       </div>
 
-        <div className="h-45 md:h-100 px-5 md:px-30 mt-10">
+        <div className="h-55  md:h-120 px-1 md:px-30 mt-10">
       <img
-            src="https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/section-img.jpg"
+            // src="https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/section-img.jpg"
+            src="https://images.pexels.com/photos/7972560/pexels-photo-7972560.jpeg"
             alt="shape"
-            className="w-full h-full rounded-3xl "
+            className="w-full h-full rounded-2xl object-cover"
         />
         </div>
 
         <div className="pt-15 pb-7">
-            <h2 className="text-center text-xl">Some image gallery with event detaisl hkjhj kjhkjk</h2>
+            <h2 className="text-gray-500 text-center font-normal text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate aut, reiciendis unde veritatis maiores sequi?</h2>
         </div>
 
       {/* SERVICE CARDS CAROUSEL */}
       <div className="max-w-7xl mx-auto mt-10">
-        <div className="bg-[#111111] rounded-2xl p-6 md:p-10">
+        <div className="bg-gray-100 rounded-2xl p-6 md:p-10">
           <Swiper
             modules={[Navigation, Autoplay]}
             spaceBetween={30}
@@ -105,7 +107,7 @@ export default function ServicesSection() {
           >
             {services.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-black rounded-2xl overflow-hidden shadow-lg group border border-gray-800">
+                <div className=" my-5 rounded-2xl overflow-hidden shadow-lg group borde border-gray-800">
                   <div className="relative">
                     <img
                       src={item.img}
@@ -120,7 +122,7 @@ export default function ServicesSection() {
 
                   <div className="p-5 h-45 md:h-35">
                     <h3 className="font-bold text-xl mb-2">{item.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed overflow-clip">{item.desc}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed overflow-clip">{item.desc}</p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -132,13 +134,13 @@ export default function ServicesSection() {
         <div className="flex flex-wrap gap-4 items-center justify-center mt-15 text-center">
           <a
             href="#"
-            className="bg-lime-400 text-black px-6 py-2 rounded-full font-bold"
+            className="bg-amber-600 text-white px-6 py-2 rounded-full font-bold"
           >
             CALL
           </a>
-          <p className="text-gray-300 text-sm md:text-base">
+          <p className="text-gray-400 text-sm md:text-base">
             Let's make something great work together.{' '}
-            <strong className="text-lime-400 cursor-pointer">Get Free Quote</strong>
+            <strong className="text-amber-600 cursor-pointer">Get Free Quote</strong>
           </p>
         </div>
       </div>

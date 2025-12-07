@@ -37,7 +37,7 @@ const ContactSection = () => {
     // This function runs ~60 times per second
     const animate = () => {
       // Configuration
-      const NORMAL_SPEED = 0.5; // Degrees per frame (~30deg/sec)
+      const NORMAL_SPEED = 0.2; // Degrees per frame (~30deg/sec)
       const SLOW_SPEED = 0.05;  // Degrees per frame (very slow)
       const INERTIA = 0.05;     // Smoothness factor (0.0 to 1.0) - Lower is smoother
 
@@ -80,8 +80,8 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="w-full py-20 px-4 md:px-10 overflow-hidden bg-black flex flex-col items-center justify-center p-4">
-      <div className='text-white text-center mb-10 text-2xl'>
+    <div className="w-full py-20 px-4 md:px-10 overflow-hidden bg-gray-100 flex flex-col items-center justify-center p-4">
+      <div className='text-black text-center mb-10 text-4xl font-medium'>
       <h2>Lets do something valuable fdgdfgd dfgdfgdf</h2>
       <h3 className='text-orange-500'>Together!</h3>
     </div>
@@ -132,7 +132,7 @@ const ContactSection = () => {
 
       {/* Center "Contact Us" Button */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <div className="bg-white hover:bg-gray-200 text-black w-24 h-24 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+        <div className="bg-amber-600 hover:bg-amber-500 text-black w-24 h-24 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-[0_0_30px_rgba(255,255,255,0.1)]">
           <span className="text-sm md:text-base font-bold">Contact</span>
           <span className="text-sm md:text-base font-bold">Us</span>
           <ArrowUpRight className="w-5 h-5 mt-1 transition-transform duration-300 group-hover:rotate-45" />

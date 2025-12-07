@@ -1,27 +1,31 @@
 import React from "react";
+import managerImg from "../../assets/manager.jpg";
 
 export default function AboutSection() {
   return (
-    <section className="w-full bg-red-900 py-20 px-4 md:px-10 overflow-hidden relative">
+    <section className="w-full bg-amber-50 py-20 px-4 md:px-10 overflow-hidden relative">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 relative">
         {/* LEFT SIDE — IMAGE & FLOATING ELEMENTS */}
         <div className="relative flex items-center justify-center lg:justify-start">
           {/* Small Star Icon + About Us */}
           <div className="absolute top-0 left-0 flex items-center gap-2">
-            <img
+            {/* <img
               src="https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/Soft-Star-2.png"
               alt="star"
               className="w-5 h-5"
-            />
+            /> */}
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E17100"><path d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"/></svg>
             <p className="text-gray-800 font-medium text-lg">About Us</p>
           </div>
 
           {/* Main Floating Image */}
           <div className="relative mt-15">
             <img
-              src="https://images.pexels.com/photos/34955053/pexels-photo-34955053.jpeg"
+              // src="https://images.pexels.com/photos/34955053/pexels-photo-34955053.jpeg"
+              // src="https://images.pexels.com/photos/34285502/pexels-photo-34285502.jpeg"
+              src="https://images.pexels.com/photos/13464092/pexels-photo-13464092.jpeg"
               alt="about"
-              className="w-80 h-64 md:w-100 md:h-100 object-cover rounded-3xl animate-[float_4s_ease-in-out_infinite]"
+              className="w-80 h-64 md:w-100 md:h-100 object-cover rounded-3xl "
             />
 
             {/* Floating ellipse */}
@@ -38,10 +42,10 @@ export default function AboutSection() {
         {/* RIGHT SIDE — TEXT CONTENT */}
         <div className="relative">
           {/* Title */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-            We deliver innovative ideas to elevate your digital agency{' '}
-            <span className="text-lime-600">and </span>
-            <span className="text-lime-600">sharpen your brand</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+            We deliver innovative ideas to elevate your presence{' '}
+            <span className="text-amber-600">and </span>
+            <span className="text-amber-600">sharpen your brand</span>
           </h2>
 
           {/* Subtitle paragraph */}
@@ -54,7 +58,7 @@ export default function AboutSection() {
           <div className="mt-8">
             <button className="bg-black text-white px-7 py-3 rounded-full text-base font-semibold flex items-center gap-3 hover:bg-gray-900 transition">
               Read More
-              <span className="w-6 h-6 bg-lime-500 rounded-full flex items-center justify-center"></span>
+              <span className="w-6 h-6 bg-amber-600 rounded-full flex items-center justify-center"></span>
             </button>
           </div>
 
@@ -63,60 +67,41 @@ export default function AboutSection() {
             {/* Profile */}
             <div className="flex items-center gap-3">
               <img
-                src="https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/test1.png"
-                alt="Eleanor Pena"
+                // src="https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/test1.png"
+                src={managerImg}
+                alt="Virat Kolhi"
                 className="w-14 h-14 rounded-full object-cover"
               />
               <div>
-                <h4 className="text-gray-900 font-semibold text-sm md:text-lg">Eleanor Pena</h4>
+                <h4 className="text-gray-900 font-semibold text-sm md:text-lg">Virat Kolhi</h4>
                 <p className="text-gray-600 text-xs md:text-sm">Manager</p>
               </div>
             </div>
 
             {/* Stats */}
             <div className="ml-4">
-              <h3 className="text-6xl md:text-7xl font-bold text-lime-600 leading-none flex items-center gap-2">
+              <h3 className="text-6xl md:text-7xl font-bold text-amber-600 leading-none flex items-center gap-2">
                 10
                 <span className="text-4xl text-gray-900">+</span>
               </h3>
               <p className="text-gray-700 text-sm max-w-[150px] mt-2">
-                Eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Years of Excellence in Digital Solutions and Revolutionizing Brand
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* FLOATING ARROW + SHAPES (Desktop only) */}
-      {/* <div className="hidden md:block absolute right-10 top-32">
-        <div
-          className="w-16 h-16 bg-contain bg-no-repeat animate-[float_4s_ease-in-out_infinite]"
-          style={{
-            backgroundImage:
-              "url(https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/arrow-1.png)",
-          }}
-        ></div>
-      </div> */}
-
-      {/* <div className="hidden md:block absolute right-0 top-60">
-        <div
-          className="w-20 h-20 bg-contain bg-no-repeat animate-[float_5s_ease-in-out_infinite]"
-          style={{
-            backgroundImage:
-              "url(https://dev251.kodesolution.com/digitaal/wp-content/uploads/2025/04/Frame.png)",
-          }}
-        ></div>
-      </div> */}
 
       {/* Float Animation Keyframes */}
-      <style>
+      {/* <style>
         {`
           @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-12px); }
           }
         `}
-      </style>
+      </style> */}
     </section>
   );
 }

@@ -1,16 +1,24 @@
 import "./App.css";
-import {Outlet} from 'react-router-dom'
-import {Header, Footer} from './components/index.js'
+import { Outlet, useLocation } from "react-router-dom";
+import { Header, Footer } from "./components/index.js";
 
 function App() {
+  const { pathname } = useLocation();
+  const hideFooter = pathname.startsWith("/admin");
 
   return (
     <div className="">
-      <Header/>
+      {/* <Header/>
       <main className="">
         <Outlet/>
       </main>
-      <Footer/>
+      <Footer/> */}
+
+      {!pathname.startsWith("/admin") && <Header />}
+      <main>
+        <Outlet />
+      </main>
+      {!hideFooter && <Footer />}
     </div>
   );
 }

@@ -158,13 +158,21 @@ const steps = [
 
 export default function WorkProcess() {
   return (
-    <section className="w-full bg-black text-white py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 rounded-[32px]">
+    <section className="w-full bg-amber-50 text-white py-14 sm:py-16 md:pb-20  px-4 sm:px-6 md:px-10 rounded-3xl">
+      <div className=" mb-3 flex items-center gap-2 ">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E17100"><path d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"/></svg>
+                <p className="font-medium text-lg text-black">Work</p>
+        </div>
       <div className="max-w-6xl lg:max-w-7xl mx-auto relative">
         {/* Clean heading (no background text) */}
+        {/* <div className=" mb-3 flex items-center gap-2 ">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E17100"><path d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"/></svg>
+                <p className="font-medium text-lg text-black">Work</p>
+        </div> */}
         <div className="text-center md:text-left mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight uppercase">
-            <span className="text-white">Our </span>
-            <span className="text-lime-400">Process</span>
+            <span className="text-black">Our Work </span>
+            <span className="text-amber-600">Process</span>
           </h2>
         </div>
 
@@ -172,10 +180,10 @@ export default function WorkProcess() {
         <div className="hidden md:grid grid-cols-4 gap-4 mb-10">
           {steps.map((item) => (
             <div key={item.step} className="flex flex-col items-start">
-              <span className="text-xs font-medium text-gray-300 tracking-wide">
+              <span className="text-xs font-medium text-gray-600 tracking-wide">
                 {item.step}
               </span>
-              <div className="mt-4 w-full h-px bg-white/15 relative">
+              <div className="mt-4 w-full h-px bg-amber-600/40 relative">
                 <span
                   className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-[3px] bg-white"
                   aria-hidden="true"
@@ -205,16 +213,16 @@ export default function WorkProcess() {
           {steps.map((item) => (
             <article
               key={item.title}
-              className="group bg-black/40 border border-white/5 rounded-[22px] px-6 sm:px-7 md:px-8 py-8 sm:py-9 md:py-10 flex flex-col justify-between transition-transform transition-shadow duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(190,242,100,0.18)]"
+              className="group bg-amber-600 border border-white/5 rounded-[22px] px-6 sm:px-7 md:px-8 py-8 sm:py-9 md:py-10 flex flex-col justify-between transition-transform transition-shadow duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(190,242,100,0.18)]"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-lime-400/70 bg-lime-400/10 flex items-center justify-center text-xl sm:text-2xl">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-amber-100/70 bg-red-100 flex items-center justify-center text-xl sm:text-2xl">
                       <span className="leading-none">{item.icon}</span>
                     </div>
                   </div>
-                  <span className="text-[11px] font-semibold tracking-wide uppercase text-gray-400">
+                  <span className="text-[11px] font-semibold tracking-wide uppercase text-gray-700">
                     {item.step}
                   </span>
                 </div>
@@ -222,14 +230,14 @@ export default function WorkProcess() {
                 <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-4 text-white">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-100 leading-relaxed">
                   {item.description}
                 </p>
               </div>
 
               {/* Hover underline */}
               <div className="mt-6 h-px w-full bg-white/5 overflow-hidden">
-                <div className="h-full w-0 bg-lime-400 transition-all duration-300 group-hover:w-full" />
+                <div className="h-full w-0 bg-white transition-all duration-300 group-hover:w-full" />
               </div>
             </article>
           ))}
