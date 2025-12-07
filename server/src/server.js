@@ -13,7 +13,6 @@ import errorHandler from './middlewares/errorHandler.js';
 import adminRoutes from './routes/adminRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 
-
 const app = express();
 
 // Security middleware
