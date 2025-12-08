@@ -148,7 +148,7 @@ const Events = () => {
     e.preventDefault();
     if (!isFormValid) return;
 
-    
+
     alert("Event Uploaded Successfully!");
   };
 
@@ -157,7 +157,7 @@ const Events = () => {
 
       {/* Heading */}
       <div className="mb-6 md:mb-8">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+        <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
           Create New Event
         </h1>
         <p className="text-sm md:text-base text-gray-500">
