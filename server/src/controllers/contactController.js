@@ -1,4 +1,5 @@
 import Contact from "../models/Contact.js";
+import { sendContactNotification } from "../utils/emailService.js";
 
 const contactController = {
   submitContact: async (req, res) => {
@@ -18,6 +19,10 @@ const contactController = {
           userAgent: req.headers['user-agent']
         }
       });
+
+      await sendContactNotification( name,
+        email,
+        message,)
 
       res.status(201).json({ message: "Message sent successfully", contact });
     } catch (err) {

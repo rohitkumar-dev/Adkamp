@@ -1,4 +1,5 @@
 import Subscription from "../models/Subscription.js";
+import { sendEmail } from "../utils/emailService.js";
 
 const subscriptionController = {
   subscribe: async (req, res) => {
@@ -22,6 +23,8 @@ const subscriptionController = {
           userAgent: req.headers['user-agent']
         }
       });
+
+      await sendEmail(process.env.COMPANY_EMAIL, "New Subscriber", email)
 
       res.status(201).json({ message: "Subscribed successfully", subscription });
     } catch (err) {

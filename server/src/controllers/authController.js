@@ -1,6 +1,6 @@
 import Otp from "../models/Otp.js";
 import jwt from "jsonwebtoken";
-import { sendEmail } from "../utils/emailService.js";
+import { sendEmail, sendOtpEmail } from "../utils/emailService.js";
 import Admin from "../models/Admin.js";
 
 const authController = {
@@ -21,7 +21,8 @@ const authController = {
         expiresAt: new Date(Date.now() + (parseInt(process.env.OTP_EXPIRY_MINUTES) || 10) * 60000),
       });
 
-      await sendEmail(email, "Your OTP", `Your OTP is ${otp}`);
+      // await sendEmail(email, "Your OTP", `Your OTP is ${otp}`);
+      await sendOtpEmail(email, otp);
 
       res.json({ message: "OTP sent successfully" });
     } catch (err) {
@@ -41,10 +42,10 @@ const authController = {
         return res.status(400).json({ message: "OTP expired" });
 
       // Create or update admin
-      let admin = await Admin.findOne({ email });
-      if (!admin) {
-        admin = await Admin.create({ email });
-      }
+      // let admin = await Admin.findOne({ email });
+      // if (!admin) {
+      //   admin = await Admin.create({ email });
+      // }
 
       await Otp.deleteMany({ email });
 
