@@ -26,3 +26,5 @@
 
 // images drive link: https://drive.google.com/drive/folders/1LT8VOP8FazgbfMPWdgMbRvUTi-TJzF5i?usp=sharing
 
+// corner whatsapp icon
+

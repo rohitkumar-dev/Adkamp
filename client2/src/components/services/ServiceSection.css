@@ -1,0 +1,32 @@
+/* Swiper Arrow Custom Styling */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+  background: white;
+  border-radius: 9999px;
+  color: black !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 48% !important;           /* Moves arrows slightly upward */
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #bef264;          /* Lime-200 shade */
+  transform: translateY(-4px);
+}
+
+/* Arrow Icon Styling */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 10px !important;
+}
+
+
+
