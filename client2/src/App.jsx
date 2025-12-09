@@ -1,13 +1,14 @@
 import "./App.css";
 import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
-
+import { Outlet, useLocation } from "react-router-dom";
 import { Header } from "./components";
 import Footer2 from "./components/footer/Footer2";
 import ScrollToTop from "./components/ScrollToTop";
 import Modal from "./components/Modal";
 
 function App() {
+  const { pathname } = useLocation();
+  const hideFooter = pathname.startsWith("/admin");
   const [contactOpen, setContactOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
 
@@ -17,11 +18,13 @@ function App() {
       <ScrollToTop />
 
       {/* HEADER PASSES CONTROLS */}
+      { !pathname.startsWith("/admin") &&
       <Header
         onContact={() => setContactOpen(true)}
         onDemo={() => setDemoOpen(true)}
-      />
+      /> }
 
+<main>
       {/* PASS POPUP TRIGGERS TO CHILD PAGES */}
       <Outlet
         context={{
@@ -29,8 +32,8 @@ function App() {
           openDemo: () => setDemoOpen(true),
         }}
       />
-
-      <Footer2 />
+</main>
+      {!hideFooter && <Footer2 />}
 
       {/* CONTACT POPUP */}
       <Modal open={contactOpen} onClose={() => setContactOpen(false)}>

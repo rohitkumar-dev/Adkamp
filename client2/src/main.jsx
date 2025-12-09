@@ -18,7 +18,8 @@ import Blog from './pages/Blog.jsx'
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
 import TermsConditions from './pages/TermsConditions.jsx'
 import Login from './pages/admin/Login.jsx'
-import Dashboard from './pages/admin/Dashboard.jsx'
+import DashboardLayout from './pages/admin/DashboardLayout.jsx'
+import ProtectedRoute from './admin/ProtectedRoute.jsx'
 
 
 const router = createBrowserRouter([
@@ -74,10 +75,19 @@ const router = createBrowserRouter([
         path: "/admin/login",
         element: <Login/>
       },
-      {
+      // {
+      //   path: "/admin/dashboard",
+      //   element: <Dashboard/>
+      // },
+       {
         path: "/admin/dashboard",
-        element: <Dashboard/>
+        element: (
+          <ProtectedRoute>
+            <DashboardLayout />
+          </ProtectedRoute>
+        )
       },
+
       {
         path: "*",
         element: <Navigate to="/" replace/>
