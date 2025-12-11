@@ -5,6 +5,7 @@ import {
   X,
   LogOut,
   ChevronRight,
+  FolderPlus,
   Menu,
 } from 'lucide-react';
 import Analytics from './DashboardPages/Analytics';

@@ -26,7 +26,7 @@ const subscriptionController = {
 
       await sendEmail(process.env.COMPANY_EMAIL, "New Subscriber", email)
 
-      res.status(201).json({ message: "Subscribed successfully", subscription });
+      res.status(201).json({ message: "Subscribed successfully" });
     } catch (err) {
       // Handle duplicate key error
       if (err.code === 11000) {

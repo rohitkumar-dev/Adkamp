@@ -9,7 +9,7 @@ const authController = {
       const { email } = req.body;
 
       if (email !== process.env.ADMIN_EMAIL)
-        return res.status(401).json({ message: "Not allowed" });
+        return res.status(401).json({ message: "OTP is sent if email is registered" });
 
       const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
@@ -18,13 +18,13 @@ const authController = {
       await Otp.create({
         email,
         otp,
-        expiresAt: new Date(Date.now() + (parseInt(process.env.OTP_EXPIRY_MINUTES) || 10) * 60000),
+        expiresAt: new Date(Date.now() + (parseInt(process.env.OTP_EXPIRY_MINUTES) || 3) * 60000),
       });
 
       // await sendEmail(email, "Your OTP", `Your OTP is ${otp}`);
       await sendOtpEmail(email, otp);
 
-      res.json({ message: "OTP sent successfully" });
+      res.json({ message: "OTP is sent if email is registered" });
     } catch (err) {
       res.status(500).json({ error: err.message });
     }
@@ -79,7 +79,7 @@ const authController = {
     try {
       const admin = await Admin.findOne({ email: req.admin.email });
       if (!admin) return res.status(404).json({ message: "Admin not found" });
-      res.json({ message: "Authenticated", admin });
+      res.json({ message: "Authenticated" });
     } catch (err) {
       res.status(500).json({ error: err.message });
     }

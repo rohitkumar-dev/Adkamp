@@ -24,7 +24,7 @@ const contactController = {
         email,
         message,)
 
-      res.status(201).json({ message: "Message sent successfully", contact });
+      res.status(201).json({ message: "Message sent successfully"});
     } catch (err) {
       res.status(500).json({ error: err.message });
     }
